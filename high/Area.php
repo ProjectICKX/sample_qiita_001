@@ -17,6 +17,16 @@ class Area {
 	 */
 	const AREA_CD_WEST_JP	= '2';
 
+	/**
+	 * @var	string	エリアコード：北海道 (3)
+	 */
+	const AREA_CD_HOKKAIDO	= '3';
+
+	/**
+	 * @var	string	エリアコード：九州 (4)
+	 */
+	const AREA_CD_KYUSYU	= '4';
+
 	//==============================================
 	// マップ
 	//==============================================
@@ -24,15 +34,17 @@ class Area {
 	 * @var	array	エリア名コードマップ
 	 */
 	const NAME_MAP = [
+		self::AREA_CD_HOKKAIDO	=> '北海道',
 		self::AREA_CD_EAST_JP	=> '東日本',
 		self::AREA_CD_WEST_JP	=> '西日本',
+		self::AREA_CD_KYUSYU	=> '九州',
 	];
 
 	/**
 	 * @var	array	都道府県コード、エリアコード変換マップ
 	 */
 	const PREF_CD_RELATION_MAP = [
-		Prefecture::PREF_CD_HOKKAIDO	=> self::AREA_CD_EAST_JP,
+		Prefecture::PREF_CD_HOKKAIDO	=> self::AREA_CD_HOKKAIDO,
 		Prefecture::PREF_CD_AOMORI		=> self::AREA_CD_EAST_JP,
 		Prefecture::PREF_CD_IWATE		=> self::AREA_CD_EAST_JP,
 		Prefecture::PREF_CD_MIYAGI		=> self::AREA_CD_EAST_JP,
@@ -71,13 +83,13 @@ class Area {
 		Prefecture::PREF_CD_KAGAWA		=> self::AREA_CD_WEST_JP,
 		Prefecture::PREF_CD_EHIME		=> self::AREA_CD_WEST_JP,
 		Prefecture::PREF_CD_KOCHI		=> self::AREA_CD_WEST_JP,
-		Prefecture::PREF_CD_FUKUOKA		=> self::AREA_CD_WEST_JP,
-		Prefecture::PREF_CD_SAGA		=> self::AREA_CD_WEST_JP,
-		Prefecture::PREF_CD_NAGASAKI	=> self::AREA_CD_WEST_JP,
-		Prefecture::PREF_CD_KUMAMOTO	=> self::AREA_CD_WEST_JP,
-		Prefecture::PREF_CD_MUCH		=> self::AREA_CD_WEST_JP,
-		Prefecture::PREF_CD_MIYAZAKI	=> self::AREA_CD_WEST_JP,
-		Prefecture::PREF_CD_KAGOSHIMA	=> self::AREA_CD_WEST_JP,
-		Prefecture::PREF_CD_OKINAWA		=> self::AREA_CD_WEST_JP,
+		Prefecture::PREF_CD_FUKUOKA		=> self::AREA_CD_KYUSYU,
+		Prefecture::PREF_CD_SAGA		=> self::AREA_CD_KYUSYU,
+		Prefecture::PREF_CD_NAGASAKI	=> self::AREA_CD_KYUSYU,
+		Prefecture::PREF_CD_KUMAMOTO	=> self::AREA_CD_KYUSYU,
+		Prefecture::PREF_CD_MUCH		=> self::AREA_CD_KYUSYU,
+		Prefecture::PREF_CD_MIYAZAKI	=> self::AREA_CD_KYUSYU,
+		Prefecture::PREF_CD_KAGOSHIMA	=> self::AREA_CD_KYUSYU,
+		Prefecture::PREF_CD_OKINAWA		=> self::AREA_CD_KYUSYU,
 	];
 }
