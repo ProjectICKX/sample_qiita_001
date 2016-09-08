@@ -26,4 +26,17 @@ class Validator {
 	public static function isNotEmptyString ($value) {
 		return $value !== '';
 	}
+
+	//==============================================
+	// 特化
+	//==============================================
+	/**
+	 * 値が有効な都道府県コードかどうか判定します。
+	 *
+	 * @param	mixed	$value	検証値
+	 * @return	bool	値が有効な都道府県コードの場合はtrue そうでない場合はfalse
+	 */
+	public static function existsPrefCd ($value) {
+		return isset(Prefecture::NAME_MAP[$value]);
+	}
 }
