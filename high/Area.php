@@ -65,7 +65,7 @@ class Area {
 		Prefecture::PREF_CD_YAMANASHI	=> self::AREA_CD_EAST_JP,
 		Prefecture::PREF_CD_NAGANO		=> self::AREA_CD_EAST_JP,
 		Prefecture::PREF_CD_GIFU		=> self::AREA_CD_WEST_JP,
-		Prefecture::PREF_CD_SHIZUOKA	=> self::AREA_CD_WEST_JP,
+		Prefecture::PREF_CD_SHIZUOKA	=> self::AREA_CD_EAST_JP,
 		Prefecture::PREF_CD_AICHI		=> self::AREA_CD_WEST_JP,
 		Prefecture::PREF_CD_TRIPLE		=> self::AREA_CD_WEST_JP,
 		Prefecture::PREF_CD_SHIGA		=> self::AREA_CD_WEST_JP,
