@@ -15,6 +15,7 @@
  *   岐阜県から高知県
  * - 九州に属する都道府県は次の通りとする。
  *   福岡県から沖縄県
+ * - 静岡県だけ東日本にする。
  */
 
 //==============================================
@@ -44,7 +45,7 @@ if ($obj->getName($pref_cd) == '') {
 $obj = new Prefecture();
 if ($pref_cd == 1) {
 	echo "北海道 => ".$obj->getName($pref_cd);
-} else if ($pref_cd <= 20) {
+} else if ($pref_cd <= 20 || $pref_cd == 22) {
 	echo "東日本 => ".$obj->getName($pref_cd);
 } else if ($pref_cd <= 39) {
 	echo "西日本 => ".$obj->getName($pref_cd);
